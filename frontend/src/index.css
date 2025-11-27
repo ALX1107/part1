@@ -1,0 +1,87 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* Variables de Color y Tipografía */
+:root {
+    --bg-primary: #fcfce3; /* Fondo */
+    --container-color-1: #73d1b4; /* Contenedor Principal (Verde Menta) */
+    --container-color-2: #ee4242; /* Destacado/Peligro (Rojo) */
+    --text-dark: #333;
+    --font-display: 'Playfair Display', serif;
+}
+
+/* Estilos Globales */
+* {
+        box-sizing: border-box;
+}
+
+/* 🚨 VERSIÓN CORREGIDA DEL BODY */
+body {
+    margin: 0;
+    font-family: var(--font-display);
+    background-color: var(--bg-primary); /* Fondo Principal */
+    color: var(--text-dark);
+    min-height: 100vh; /* Se mantiene la altura mínima */
+    /* ¡ELIMINADAS: display: flex; justify-content: center; align-items: center; */
+}
+
+/* Asegura que el contenedor de React (generalmente #root o el componente App) 
+   también ocupe toda la altura, si es necesario */
+#root {
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* Estilo Base para Contenedores (ej: Formularios de Login) */
+.form-container {
+        background-color: var(--container-color-1);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        width: 100%;
+        max-width: 400px;
+}
+
+/* Input component */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.input-group label {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.styled-input {
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: var(--container-color-2);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--text-dark);
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+
+.success { color: green; }
+.error { color: #b33; }
